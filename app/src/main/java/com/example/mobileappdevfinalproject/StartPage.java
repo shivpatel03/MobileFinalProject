@@ -12,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 import android.view.View;
 import android.widget.*;
 
-public class MainActivity extends AppCompatActivity {
+public class StartPage extends AppCompatActivity {
 
     Button loginButton;
 
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     // redirect to login page onClick
     public void redirectToLoginPage(View view) {
-        Intent intent = new Intent(MainActivity.this, LoginPage.class);
+        Intent intent = new Intent(StartPage.this, LoginPage.class);
         startActivity(intent);
     }
 }
