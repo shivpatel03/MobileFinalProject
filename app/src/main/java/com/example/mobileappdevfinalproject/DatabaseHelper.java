@@ -104,4 +104,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return listings;
     }
+
+    public boolean checkUser(String username, String password) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM USERS WHERE USERNAME = " + username + " and PASSWORD = " + password, null);
+
+        return cursor.moveToFirst();
+    }
 }
